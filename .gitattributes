@@ -1,2 +1,320 @@
+//CURRENCY CONVERTER for java using basic methods 
+import java.util.*;
+class CURRENCY_CONVERTER1
+{
+	Scanner sc=new Scanner(System.in);
+	static double INDIAN_RUPEES;
+	static double EURO=90.3089;
+	static double US_DOLLAR=86.5745;
+	static double CANADIAN_DOLLAR=60.1011;
+	static double AUSTRALIAN_DOLLAR=53.9645;
+	static double CHINESE_YUAN=11.9407;
+	static double SRILANKAN_RUPEES=0.2911;
+	static double PAKISTANI_RUPEE=0.3108;
+	static double KUWAITI_DINAR=280.7103;
+	static double JAPANESE_YEN=0.5617;
+	static double RUSSIAN_RUBLE=0.8803;
+
+	CURRENCY_CONVERTER1(int n)
+	{
+		System.out.println("DISPLAYING ALL AVIALABLE CURRENCIES");
+		System.out.println();
+		System.out.println("1.INDIAN_RUPEES");
+		System.out.println();
+		System.out.println("2.EURO");
+		System.out.println();
+		System.out.println("3.US_DOLLAR");
+		System.out.println();
+		System.out.println("4.CANADIAN_DOLLAR");
+		System.out.println();
+		System.out.println("5.AUSTRALIAN_DOLLAR");
+		System.out.println();
+		System.out.println("6.CHINESE_YUAN");
+		System.out.println();
+		System.out.println("7.SRILANKAN_RUPEES");
+		System.out.println();
+		System.out.println("8.PAKISTANI_RUPEE");
+		System.out.println();
+		System.out.println("9.KUWAITI_DINAR");
+		System.out.println();
+		System.out.println("10.JAPANESE_YEN");
+		System.out.println();
+		System.out.println("11.RUSSIAN_RUBLE");
+		System.out.println();
+		System.out.println("THANKS FOR DISPLAYING ALL AVILABLE CURRENCY");
+		System.out.println();
+		System.out.println();
+	}
+	CURRENCY_CONVERTER1()
+	{
+
+	}
+	void EXCHANGE()
+	{
+		boolean b=true;
+		System.out.println("WELCOME TO THE EXCHANGE METHOD");
+		System.out.println("PLEASE ENTER INDIAN RUPEE TO EXCHANGE IN OTHER CURREENCY: ");
+		INDIAN_RUPEES=sc.nextInt();
+	while(b)
+	{
+		System.out.println("1.INDIAN RUPEE  ----> EURO");
+		System.out.println("2.INDIAN RUPEE  ----> US_DOLLAR");
+		System.out.println("3.INDIAN RUPEE  ----> CANADIAN_DOLLAR");
+		System.out.println("4.INDIAN RUPEE  ----> AUSTRALIAN_DOLLAR");
+		System.out.println("5.INDIAN RUPEE  ----> CHINESE_YUAN");
+		System.out.println("6.INDIAN RUPEE  ----> SRILANKAN_RUPEES");
+		System.out.println("7.INDIAN RUPEE  ----> PAKISTANI_RUPEE");
+		System.out.println("8.INDIAN RUPEE  ----> KUWAITI_DINAR");
+		System.out.println("9.INDIAN RUPEE  ---->JAPANESE_YEN");
+		System.out.println("10.INDIAN RUPEE  ----> RUSSIAN_RUBLE");
+		System.out.println("11.EXIT");
+		System.out.println("ENTER YOUR CHOICE AS PER ABOVE CONDITION");
+		int n=sc.nextInt();
+		switch(n)
+		{
+		case 1:EURO=INDIAN_RUPEES/EURO;
+		System.out.println(EURO);break;
+		case 2:US_DOLLAR=INDIAN_RUPEES/US_DOLLAR;
+		System.out.println(US_DOLLAR);break;
+		case 3:CANADIAN_DOLLAR=INDIAN_RUPEES/CANADIAN_DOLLAR;
+		System.out.println(CANADIAN_DOLLAR);break;
+		case 4:AUSTRALIAN_DOLLAR=INDIAN_RUPEES/AUSTRALIAN_DOLLAR;
+		System.out.println(AUSTRALIAN_DOLLAR);break;
+		case 5:CHINESE_YUAN=INDIAN_RUPEES/CHINESE_YUAN;
+		System.out.println(CHINESE_YUAN);break;
+		case 6:SRILANKAN_RUPEES=INDIAN_RUPEES/SRILANKAN_RUPEES;
+		System.out.println(SRILANKAN_RUPEES);break;
+		case 7:PAKISTANI_RUPEE=INDIAN_RUPEES/PAKISTANI_RUPEE;
+		System.out.println(PAKISTANI_RUPEE);break;
+		case 8:KUWAITI_DINAR=INDIAN_RUPEES/KUWAITI_DINAR;
+		System.out.println(KUWAITI_DINAR);break;
+		case 9:JAPANESE_YEN=INDIAN_RUPEES/JAPANESE_YEN;
+		System.out.println(JAPANESE_YEN);break;
+		case 10:RUSSIAN_RUBLE=INDIAN_RUPEES/RUSSIAN_RUBLE;
+		System.out.println(RUSSIAN_RUBLE);break;
+		case 11:b=false;
+		System.out.println("THANKS FOR USING THE EXCHANGE METHOD");break;
+default:System.out.println("INVALID INPUT PLEASE ENTER VALID INPUT");
+break;
+		}
+	}
+}
+}
+class CURRENCY_CONVERTER2 extends CURRENCY_CONVERTER1
+{
+	Scanner sc=new Scanner(System.in);
+	void UPDATE()
+	{
+		boolean b=true;
+	while(b)
+	{		
+	System.out.println("WELCOME TO UPDATE METHOD:");
+	System.out.println("ENTER 1---> UPDATE CURREENCY RATE OF EURO");
+	System.out.println("ENTER 2---> UPDATE CURREENCY RATE OF US_DOLLAR");
+	System.out.println("ENTER 3---> UPDATE CURREENCY RATE OF CANADIAN_DOLLAR");
+	System.out.println("ENTER 4---> UPDATE CURREENCY RATE OF AUSTRALIAN_DOLLAR");
+	System.out.println("ENTER 5---> UPDATE CURREENCY RATE OF CHINESE_YUAN");
+	System.out.println("ENTER 6---> UPDATE CURREENCY RATE OF SRILANKAN_RUPEES");
+	System.out.println("ENTER 7---> UPDATE CURREENCY RATE OF PAKISTANI_RUPEE");
+	System.out.println("ENTER 8---> UPDATE CURREENCY RATE OF KUWAITI_DINAR");
+	System.out.println("ENTER 9---> UPDATE CURREENCY RATE OF JAPANESE_YEN");
+	System.out.println("ENTER 10---> UPDATE CURREENCY RATE OF RUSSIAN_RUBLE");
+	System.out.println("ENTER 11--->EXIT");
+	System.out.println("ENTER YOUR CHOICE:");
+	int n=sc.nextInt();
+	if(n==1)
+	{
+		EURO=sc.nextInt();
+	}
+	else if(n==2)
+	{
+		US_DOLLAR=sc.nextInt();
+	}
+	else if(n==3)
+	{
+		CANADIAN_DOLLAR=sc.nextInt();
+	}
+	else if(n==4)
+	{
+		AUSTRALIAN_DOLLAR=sc.nextInt();		
+	}
+	else if(n==5)
+	{
+		CHINESE_YUAN=sc.nextInt();		
+	}
+	else if(n==6)
+	{
+		SRILANKAN_RUPEES=sc.nextInt();
+	}
+	else if(n==7)
+	{
+		PAKISTANI_RUPEE=sc.nextInt() ;
+	}
+	else if(n==8)
+	{
+		KUWAITI_DINAR=sc.nextInt();
+	}
+	else if(n==9)
+	{
+		JAPANESE_YEN=sc.nextInt();
+	}
+	else if(n==10)
+	{
+		RUSSIAN_RUBLE=sc.nextInt(); 
+	}
+	else if(n==11)
+	{
+		b=false;
+		System.out.println("THANKS FOR USING UPDATE METHOD");
+	}
+	else 
+	{
+		System.out.println("ENTER VALID INPUT");
+		System.out.println();
+	}
+	}
+	System.out.println("CURRENCY RATE AFTER UPDATE");
+	System.out.println("EURO:"+EURO);
+	System.out.println("US_DOLLAR:"+US_DOLLAR);
+	System.out.println("CANADIAN_DOLLAR:"+CANADIAN_DOLLAR);
+	System.out.println("AUSTRALIAN_DOLLAR:"+AUSTRALIAN_DOLLAR);
+	System.out.println("CHINESE_YUAN:"+CHINESE_YUAN);
+	System.out.println("SRILANKAN_RUPEES:"+SRILANKAN_RUPEES);
+	System.out.println("PAKISTANI_RUPEE:"+PAKISTANI_RUPEE);
+	System.out.println("KUWAITI_DINAR:"+KUWAITI_DINAR);
+	System.out.println("JAPANESE_YEN:"+JAPANESE_YEN);
+	System.out.println("RUSSIAN_RUBLE:"+RUSSIAN_RUBLE);
+	}
+	class CURRENCY_CONVERTER2INNER
+	{
+	void abc()
+	{		
+		System.out.println("WELCOME TO THE INNER CLASS METHOD OF CURRENCY_CONVERTER2");
+		System.out.println();
+	boolean z=true;
+	while(z)
+	{
+	System.out.println("DIPLAYING INDIAN RUPPEE 1 FOR DIFFRENT COUNTRY MONEY");
+	System.out.println("1.EURO");
+	System.out.println("2.US_DOLLAR");
+	System.out.println("3.CANADIAN_DOLLAR");
+	System.out.println("4.AUSTRALIAN_DOLLAR");
+	System.out.println("5.CHINESE_YUAN");
+	System.out.println("6.SRILANKAN_RUPEES");
+	System.out.println("7.PAKISTANI_RUPEE");
+	System.out.println("8.KUWAITI_DINAR");
+	System.out.println("9.JAPANESE_YEN");
+	System.out.println("10.RUSSIAN_RUBLE");
+	System.out.println("11.EXIT");
+	System.out.print("ENTER THE NUMBER:");
+	int l=sc.nextInt();	
+	System.out.println();
+	switch(l)
+	{
+		case 1:System.out.println("ONE RUPEE="+(1/EURO)+" EURO");
+		System.out.println();break;
+		case 2:System.out.println("ONE RUPEE="+(1/US_DOLLAR)+" US_DOLLAR");
+		System.out.println();break;
+		case 3:System.out.println("ONE RUPEE="+(1/CANADIAN_DOLLAR)+" CANADIAN_DOLLAR");
+		System.out.println();break;
+		case 4:System.out.println("ONE RUPEE="+(1/AUSTRALIAN_DOLLAR)+" AUSTRALIAN_DOLLAR");
+		System.out.println();break;
+		case 5:System.out.println("ONE RUPEE="+(1/CHINESE_YUAN)+" CHINESE_YUAN");
+		System.out.println();break;
+		case 6:System.out.println("ONE RUPEE="+(1/SRILANKAN_RUPEES)+" SRILANKAN_RUPEES");
+		System.out.println();break;
+		case 7:System.out.println("ONE RUPEE="+(1/PAKISTANI_RUPEE)+" PAKISTANI_RUPEE");
+		System.out.println();break;
+		case 8:System.out.println("ONE RUPEE="+(1/KUWAITI_DINAR)+" KUWAITI_DINAR");
+		System.out.println();break;
+		case 9:System.out.println("ONE RUPEE="+(1/JAPANESE_YEN)+" JAPANESE_YEN");
+		System.out.println();break;
+		case 10:System.out.println("ONE RUPEE="+(1/RUSSIAN_RUBLE)+" RUSSIAN_RUBLE");
+		System.out.println();break;
+		case 11:z=false;
+		System.out.println("THANKS FOR USING INNER CLASS METHOD");
+		System.out.println();
+	}
+	}
+	}
+	}
+
+}
+class DISPLAY extends CURRENCY_CONVERTER1
+{
+	void display()
+	{
+System.out.println("DISPLAY ALL CURRENCY CONVERTED FROM GIVEN INDIAN MONEY");
+		System.out.println("ENTER INDIAN CURRENCY to change: ");
+		INDIAN_RUPEES=sc.nextInt();
+		EURO=INDIAN_RUPEES/90.3089;
+		System.out.println("EURO="+(EURO));
+		US_DOLLAR=INDIAN_RUPEES/86.5745;
+		System.out.println("US_DOLLAR="+(US_DOLLAR));
+		CANADIAN_DOLLAR=INDIAN_RUPEES/60.1011;
+		System.out.println("CANADIAN_DOLLAR="+(CANADIAN_DOLLAR));
+		AUSTRALIAN_DOLLAR=INDIAN_RUPEES/53.9645;
+		System.out.println("AUSTRALIAN_DOLLAR="+(AUSTRALIAN_DOLLAR));
+		CHINESE_YUAN=INDIAN_RUPEES/11.9407;
+		System.out.println("CHINESE_YUAN="+(CHINESE_YUAN));
+		SRILANKAN_RUPEES=INDIAN_RUPEES/0.2911;
+		System.out.println("SRILANKAN_RUPEES="+(SRILANKAN_RUPEES));
+		PAKISTANI_RUPEE=INDIAN_RUPEES/0.3108;
+		System.out.println("PAKISTANI_RUPEE="+PAKISTANI_RUPEE);
+		KUWAITI_DINAR=INDIAN_RUPEES/280.7103;
+		System.out.println("KUWAITI_DINAR="+KUWAITI_DINAR);
+		JAPANESE_YEN=INDIAN_RUPEES/0.5617;
+		System.out.println("JAPANESE_YEN="+JAPANESE_YEN);
+		RUSSIAN_RUBLE=INDIAN_RUPEES/0.8803;
+		System.out.println("RUSSIAN_RUBLE="+RUSSIAN_RUBLE);
+
+	}
+
+}
+class CURRENCY_CONVERTER
+{
+	static
+		{
+			System.out.println("!!!*WELCOME TO CURRENCY_CONVERTER PROGRAM*!!!");
+			System.out.println();
+		}
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("$$ CURREENCY CONVERTER PROGRAM WITH RESPECT TO INDIAN CURRENCY $$");
+		boolean b=true;
+		while(b)
+		{
+			System.out.println("1.SHOW ALL AVIALABLE CURRENCY");
+			System.out.println("2.INDIAN RUPEE  ---->  OTHER CURRENCY EXCHANGE");
+			System.out.println("3.UPDATE CURRENCY RATES");
+			System.out.println("4.ONE RUPEE  ----->  OTHER COUNTRIES CURRENCIES");
+			System.out.println("5.DISPLAY ALL CURRENCIES FROM GIVEN INDIAN RUPEE");
+			System.out.println("6.EXIT");
+			System.out.println("PLEASE ENTER YOUR CHOICE");
+			int n=sc.nextInt();
+			System.out.println("THANKS FOR ENTERING YOUR CHOICE ");
+			System.out.println();
+			switch(n)
+			{
+				case 1:CURRENCY_CONVERTER1 ob=new CURRENCY_CONVERTER1(1);break;
+				case 2:CURRENCY_CONVERTER1 ob1=new CURRENCY_CONVERTER1();
+				ob1.EXCHANGE();break;
+				case 3:CURRENCY_CONVERTER2 ob2=new CURRENCY_CONVERTER2();
+				ob2.UPDATE();break;
+				case 4:CURRENCY_CONVERTER2 ob3=new CURRENCY_CONVERTER2();
+				CURRENCY_CONVERTER2.CURRENCY_CONVERTER2INNER i=ob3.new CURRENCY_CONVERTER2INNER();
+				i.abc();
+				case 5:DISPLAY ob4=new DISPLAY();
+				ob4.display();break;
+				case 6:b=false;
+				System.out.println("!!!*THANKS FOR USING CURRENCY_CONVERTER PROGRAM*!!!");
+				System.out.println();break;
+				default: System.out.println("INVALID CHOICE PLEASE ENTER VALID CHOICE");
+				System.out.println();
+			}
+		}
+
+	}
 # Auto detect text files and perform LF normalization
 * text=auto
